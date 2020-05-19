@@ -1,0 +1,18 @@
+{
+    "version": 3,
+    "mappings": "AEAA,AAAA,EAAE,AAAA,CACE,WAAW,CAAC,GAAI,CACnB,AACD,AAAA,EAAE,AAAA,CACE,WAAW,CAAC,GAAI,CACnB,AACD,AAAA,CAAC,AAAA,CACG,WAAW,CAAE,GAAG,CACnB,AACD,AAAA,EAAE,AAAA,CACE,WAAW,CAAE,GAAG,CACnB,ACXD,AAAA,IAAI,AAAA,CACA,SAAS,CAAC,KAAK,CAClB,AACD,AAAA,IAAI,AAAA,CACA,WAAW,CAAE,wBAAwB,CACxC,AACD,AAAA,CAAC,AAAA,CACG,MAAM,CAAE,CAAC,CACT,OAAO,CAAE,CAAC,CACb,AACD,AAAA,QAAQ,AAAA,CACJ,SAAS,CAAC,MAAM,CAChB,OAAO,CAAC,MAAM,CACd,MAAM,CAAE,IAAI,CACf,AACD,AAAA,KAAK,AAAA,CACD,QAAQ,CAAE,MAAM,CAChB,GAAG,CAAE,IAAI,CACT,IAAI,CAAC,CAAC,CACT,ACnBD,AAAA,MAAM,AAAA,CACF,MAAM,CAAE,KAAK,CACb,UAAU,CAAE,8BAA8B,CAAC,SAAS,CAAC,KAAK,CAAC,MAAM,CAEpE",
+    "sources": [
+        "../scss/main.scss",
+        "../scss/_vars.scss",
+        "../scss/_typography.scss",
+        "../scss/_base.scss",
+        "../scss/_header.scss",
+        "../scss/_cap-section.scss",
+        "../scss/_first-section.scss",
+        "../scss/_sec-section.scss",
+        "../scss/_third-section.scss",
+        "../scss/_footer.scss"
+    ],
+    "names": [],
+    "file": "main.min.css"
+}
