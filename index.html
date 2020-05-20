@@ -1,147 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./asset/css/main.min.css" />
+    <title>ОЧИСНИЙ ФІЛЬТР ДЛЯ ВОДИ</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-    crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./asset/css/main.min.css" />
-  <title>ОЧИСНИЙ ФІЛЬТР ДЛЯ ВОДИ</title>
-</head>
+  <header></header>
 
-<header></header>
+  <div class="wrapper">
+    <div class="logo">
+      <img src="./asset/images/logo.png" alt="Вікна Steko" />
+    </div>
 
-<div class="wrapper">
-  <div class="logo">
-    <img src="./asset/images/logo.png" alt="Вікна Steko" />
+    <section class="first-section">
+      <div class="row">
+        <div class="col-md-4">
+          <h1 class="first-section__heading">ОЧИСНИЙ ФІЛЬТР ДЛЯ ВОДИ</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-5">
+          <h3 class="first-section__descrip">
+            жива чиста вода, яка завжди під рукою
+          </h3>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-between align-items-end">
+        <div class="col-md-5">
+          <div class="card card--left-border">
+            <p>
+              Неможливо уявити дім без ВОДИ як і життя людини.
+            </p>
+          </div>
+        </div>
+        <a href="#" class="col-md-5 btn-c btn-c--transp">ДЕТАЛЬНІШЕ</a>
+      </div>
+    </section>
+    <section class="row cup-section">
+      <img id="cup" src="./asset/images/cup.png" />
+      <img id="water" src="./asset/images/water.png" />
+      <ul class="cup-section__ul--left col-md-3">
+        <li data-num="1">
+          <p>без антибіотиків</p>
+          <img src="./asset/images/lineGroup.svg" />
+        </li>
+        <li data-num="3">
+          <p>максимально очищена на 99,9%</p>
+          <img src="./asset/images/lineGroup.svg" />
+        </li>
+        <li data-num="5">
+          <p>без механічних домішок та хлору</p>
+          <img src="./asset/images/lineGroup.svg" />
+        </li>
+        <li data-num="7">
+          <p>має природній смак та запах</p>
+          <img src="./asset/images/lineGroup.svg" />
+        </li>
+      </ul>
+      <ul class="cup-section__ul--right col-md-4">
+        <li data-num="2">
+          <p>
+            комплектується окремим краном з ємністю 10 л для зручного
+            користування
+          </p>
+          <img src="./asset/images/lineGroup.svg" />
+        </li>
+        <li data-num="4">
+          <p>може мати помпу для підвищення тиску в системі</p>
+          <img src="./asset/images/lineGroup.svg" />
+        </li>
+        <li data-num="6">
+          <p>може бути мінералізована</p>
+          <img src="./asset/images/lineGroup.svg" />
+        </li>
+      </ul>
+    </section>
+    <section class="sec-section">
+      <h2>Система очищення води “Бриз Гарант Оптима”</h2>
+      <div class="sec-section__calc-box">
+        <div class="sec-section__img">
+          <img
+            src="./asset/images/filter.png"
+            alt="Система очищення води “Бриз Гарант Оптима”"
+          />
+        </div>
+        <form action="">
+          <div class="sec-section__calc-box--top">
+            <div class="custom-control custom-checkbox" data-anim="1">
+              <input type="checkbox" class="custom-control-input" checked />
+              <label class="custom-control-label">в наявності</label>
+            </div>
+            <output id="result"></output>
+            <p>Доставка - безкоштовна!</p>
+          </div>
+
+          <div class="sec-section__calc-box--bottom">
+            <div class="pump">
+              <div class="custom-control custom-checkbox" data-anim="2">
+                <input type="checkbox" class="custom-control-input" id="pump" />
+                <label class="custom-control-label" for="pump">
+                  <span>Помпа</span>
+                  <span>2000 ₴</span>
+                </label>
+              </div>
+            </div>
+            <div class="install">
+              <div class="custom-control custom-checkbox" data-anim="3">
+                <input
+                  type="checkbox"
+                  class="custom-control-input"
+                  id="install"
+                />
+                <label class="custom-control-label" for="install">
+                  <span>Монтаж</span>
+                  <span>450 ₴</span>
+                </label>
+                <p>1 година</p>
+              </div>
+            </div>
+            <button type="submit" class="btn-c btn-c--fill">ЗАМОВИТИ</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <section class="third-section">
+      <h2 class="third-section__heading">Техничні характеристики:</h2>
+      <ul class="third-section__props--keys">
+        <li>
+          <p>Висота картиджа</p>
+        </li>
+        <li>
+          <p>Діаметр картирджа</p>
+        </li>
+        <li>
+          <p>Температура води</p>
+        </li>
+        <li>
+          <p>Тиск води у водопроводі</p>
+        </li>
+        <li>
+          <p>Накопичувальна ємність</p>
+        </li>
+        <li>
+          <p>Габаритний розмір фільтру</p>
+        </li>
+        <li>
+          <p>Розмір коробки</p>
+        </li>
+        <li>
+          <p>Вага</p>
+        </li>
+        <li>
+          <p>Термін служби</p>
+        </li>
+      </ul>
+      <ul class="third-section__props--values">
+        <li>
+          <p>254 мм</p>
+        </li>
+        <li>
+          <p>70 мм</p>
+        </li>
+        <li>
+          <p>+4 ... +38С</p>
+        </li>
+        <li>
+          <p>1.5 ... 6.0 атм.</p>
+        </li>
+        <li>
+          <p>260х380/280х420 мм</p>
+        </li>
+        <li>
+          <p>400х135х420 мм</p>
+        </li>
+        <li>
+          <p>400х290х725 мм</p>
+        </li>
+        <li>
+          <p>12,5 кг</p>
+        </li>
+        <li>
+          <p>не більше 5 років</p>
+        </li>
+        <li>
+          *за умови тиску менше 3,5 атм - помпа<br />
+          встановлюється обов'язково
+        </li>
+      </ul>
+
+      <div class="third-section__icons">
+        <figure>
+          <img src="./asset/images/icons/H2O.svg" data-animation-name="img-1"  />
+          <figcaption>
+            ДО 99% <br />
+            ЧИСТА ВОДА
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="./asset/images/icons/Ag+.svg" data-animation-name="img-2" />
+          <figcaption>З ІОНАМИ СРІБЛА</figcaption>
+        </figure>
+        <figure>
+          <img src="./asset/images/icons/factory.svg" data-animation-name="img-3" />
+          <figcaption>ДЛЯ ВАЖНИХ ЕКОЛОГІЧНИХ УМОВ</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="fourth-section">
+      <h2 class="fourth-section__heading">Система зворотного осмосу</h2>
+      <div class="fourth-section card card--left-border">
+        <p>
+          Мембрана, яку має система фільтрації води від Steko - пропускає лише
+          воду та кисень. А вугільний фільтр розташований одразу перед краном.
+        </p>
+      </div>
+      <div class="fourth-section__img">
+        <img
+          src="./asset/images/cut-filter.png"
+          alt="Система очищення води “Бриз Гарант Оптима”"
+        />
+      </div>
+    </section>
+    <section class="fifth-section">
+      <h2 class="fifth-section__heading">
+        Вода з багатосутепеневим очищенням підходить Вам:
+      </h2>
+      <figure class="card card--left-border">
+        <img src="./asset/images/icons/1.svg"  />
+        <figcaption>для пиття</figcaption>
+      </figure>
+      <figure class="card card--left-border">
+        <img src="./asset/images/icons/2.svg" />
+        <figcaption>для щоденного готування їжі</figcaption>
+      </figure>
+      <figure class="card card--left-border">
+        <img src="./asset/images/icons/3.svg" />
+        <figcaption>для свіжої кави та чаю</figcaption>
+      </figure>
+      <figure class="card card--left-border">
+        <img src="./asset/images/icons/4.svg" />
+        <figcaption>для прасок без накипу</figcaption>
+      </figure>
+      <figure class="card card--left-border">
+        <img src="./asset/images/icons/5.svg" />
+        <figcaption>для домашніх улюбленців та рослин</figcaption>
+      </figure>
+      <figure class="card card--left-border">
+        <img src="./asset/images/icons/6.svg" />
+        <figcaption>для приготування дитячого харчування</figcaption>
+      </figure>
+    </section>
+    <footer>
+    
+        <h2>жива чиста вода, яка завжди під рукою</h2>
+        <a href="#" class="btn-c btn-c--fill">ЗАМОВИТИ</a>
+        
+        <div class="logo">
+          <img src="./asset/images/logo.png" alt="Вікна Steko" />
+        </div>
+    
+    </footer>
   </div>
 
-  <section class="first-section">
-    <div class="row">
-      <div class="col-md-4">
-        <h1 class="first-section__heading">ОЧИСНИЙ ФІЛЬТР ДЛЯ ВОДИ</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-5">
-        <h3 class="first-section__descrip">
-          жива чиста вода, яка завжди під рукою
-        </h3>
-      </div>
-    </div>
-    <div class="row d-flex justify-content-between align-items-end">
-      <div class="col-md-5 ">
-        <div class="card card--left-border">
-          <p>
-            Неможливо уявити дім без ВОДИ як і життя людини.
-          </p>
-        </div>
 
-      </div>
-      <a href="#" class=" col-md-5 btn-c btn-c--transp">ДЕТАЛЬНІШЕ</a>
-    </div>
-  </section>
-  <section class=" row cup-section ">
-    <img id="cup" src="./asset/images/cup.png">
-    <img id="water" src="./asset/images/water.png">
-    <ul class="cup-section__ul--left col-md-3">
-      <li data-num=1>
-        <p>без антибіотиків</p>
-        <img src="./asset/images/lineGroup.svg">
-      </li>
-      <li data-num=3>
-        <p>максимально очищена на 99,9%</p>
-        <img src="./asset/images/lineGroup.svg">
-      </li>
-      <li data-num=5>
-        <p>без механічних домішок та хлору</p>
-        <img src="./asset/images/lineGroup.svg">
-      </li>
-      <li data-num=7>
-        <p>має природній смак та запах</p>
-        <img src="./asset/images/lineGroup.svg">
-      </li>
-    </ul>
-    <ul class="cup-section__ul--right col-md-4">
-      <li data-num=2>
-        <p>комплектується окремим краном з ємністю 10 л для зручного користування</p>
-        <img src="./asset/images/lineGroup.svg">
-      </li>
-      <li data-num=4>
-        <p>може мати помпу для підвищення тиску в системі</p>
-        <img src="./asset/images/lineGroup.svg">
-      </li>
-      <li data-num=6>
-        <p>може бути мінералізована
-        </p>
-        <img src="./asset/images/lineGroup.svg">
-      </li>
-    </ul>
-
-  </section>
-  <section class="sec-section">
-    <h2>Система очищення води “Бриз Гарант Оптима”</h2>
-    <div class="sec-section__calc-box">
-      <div class="sec-section__img">
-        <img src="./asset/images/filter.png" alt="Система очищення води “Бриз Гарант Оптима”">
-      </div>
-      <form action="">
-
-        <div class="sec-section__calc-box--top">
-          <div class="custom-control custom-checkbox" data-anim=1>
-            <input type="checkbox" class="custom-control-input" checked>
-            <label class="custom-control-label">в наявності</label>
-          </div>
-          <output id="result"></output>
-          <p>Доставка - безкоштовна!</p>
-        </div>
-
-        <div class="sec-section__calc-box--bottom">
-          <div class="pump">
-            <div class="custom-control custom-checkbox" data-anim=2>
-              <input type="checkbox" class="custom-control-input" id="pump">
-              <label class="custom-control-label" for="pump">
-                <span>Помпа</span>
-                <span>2000 ₴</span>
-              </label>
-            </div>
-          </div>
-          <div class="install">
-            <div class="custom-control custom-checkbox " data-anim=3>
-              <input type="checkbox" class="custom-control-input" id="install">
-              <label class="custom-control-label" for="install">
-                <span>Монтаж</span>
-                <span>450 ₴</span>
-              </label>
-              <p>1 година</p>
-            </div>
-          </div>
-          <button type="submit" class="btn-c btn-c--fill">ЗАМОВИТИ</button>
-
-        </div>
-
-
-
-
-      </form>
-    </div>
-  </section>
-  <section style="height:100vh"></section>
-  <section></section>
-  <section></section>
-  <footer></footer>
-</div>
-
-<body>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
-  <script src="./asset/js/main.js"></script>
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="./asset/js/main.js"></script>
+  </body>
 </html>

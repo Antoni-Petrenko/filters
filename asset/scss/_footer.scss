@@ -1,0 +1,20 @@
+footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 16rem;
+    & h2{
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 39px;
+        text-transform: uppercase;
+        color:$prim-color;
+        flex-basis: 40%;
+        text-align: left;
+    }
+    &> .logo{
+        flex-basis: 100%;
+        margin: 7.3rem 0 8.4rem 0;
+    }
+}

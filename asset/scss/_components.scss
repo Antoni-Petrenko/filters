@@ -1,40 +1,73 @@
 .card {
-    padding: 34.4px 44.78px;
-    background: #FFFFFF;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
-    border-radius: 6px;
-    border: 10px solid transparent;
-    &--left-border {
-        border-left-color: $prim-color;
-    }
-    &--right-border {
-        border-right-color: $prim-color;
-    }
-    &>p {
-        font-size: 3.2rem;
-        color: $sec-color;
-    }
+  padding: 34.4px 44.78px;
+  background: #ffffff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+  border: 10px solid transparent;
+  &--left-border {
+    border-left-color: $prim-color;
+  }
+  &--right-border {
+    border-right-color: $prim-color;
+  }
+  & > p {
+    font-size: 3.2rem;
+    color: $sec-color;
+  }
 }
 
 .btn-c {
-    font-size: 2.4rem;
-    padding: 2.5rem 4.5rem;
-    border: 2px solid $prim-color;
-    border-radius: 10px;
-    text-align: center;
-    &--fill {
-        background-color: $prim-color;
-        color: white;
-    }
-    &--transp {
-        background-color: transparent;
+  font-size: 2.4rem;
+  padding: 2.5rem 4.5rem;
+  border: 2px solid $prim-color;
+  border-radius: 10px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  will-change: transform;
+  z-index: 0;
+  &--fill {
+    background-color: $prim-color;
+    color: white;
+    &:hover{
         color: $prim-color;
     }
+  }
+  &--transp {
+    background-color: transparent;
+    color: $prim-color;
+    &:hover{
+        color: white;
+    }
+  }
+  &::after {
+    border-radius: inherit;
+    content: "";
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: translate(-100%, 0) rotate(10deg);
+    transform-origin: top left;
+    transition: 0.2s transform ease-out;
+    will-change: transform;
+    z-index: -1;
+  }
 }
-
+.btn-c:hover::after{
+        transform: translate(0, 0);
+}
+.btn-c.btn-c--transp::after{
+    background-color: $prim-color;
+}
+.btn-c.btn-c--fill::after{
+    background-color: white
+}
 .wrapper {
-    max-width: 1170px;
-    padding: 0 15px;
-    margin:-65vh auto 0 auto;
-    position: relative;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: -65vh auto 0 auto;
+  position: relative;
 }
