@@ -7,14 +7,10 @@ body{
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.wrapper{
-    max-width:1170px;
-    padding:0 15px;
-    margin: auto;
-}
-.logo{
-    position: sticky;
-    top: 10vh;
-    left:0;
+
+a:hover{
+    text-decoration: none;
+    color: inherit;
 }

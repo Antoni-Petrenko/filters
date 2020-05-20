@@ -1,0 +1,23 @@
+.first-section{
+    &__heading{
+        font-size: 5.4rem;
+        color:$sec-color;
+       
+    }
+    &__descrip{
+        font-size:3.2rem;
+        color:$sec-color;
+        opacity: .8;
+        text-transform: uppercase;
+        
+    }
+    &>.row:nth-child(1n){
+        margin-top:7.7rem;
+    }
+    &>.row:nth-child(2n){
+        margin-top: 3rem;
+    }
+    &>.row:nth-child(3n){
+        margin-top: 9rem;
+    }
+}

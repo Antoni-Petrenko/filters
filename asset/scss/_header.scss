@@ -1,5 +1,7 @@
 header{
-    height: 100vh;
-    background: url("../images/header-bg.jpg") no-repeat fixed center ;
-  
+    height: 81vh;
+    background-image: url("../images/header-bg.png");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }

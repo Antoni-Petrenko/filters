@@ -1,0 +1,77 @@
+.sec-section {
+    text-align: center;
+    margin-top: 15rem;
+    .custom-control.custom-checkbox{
+        margin-bottom: 4rem;
+        margin-left:2rem
+    }
+    &>h2 {
+        color: $sec-color;
+        font-size: 3.2rem;
+        margin-bottom: 4.5rem;
+    }
+    &__img{
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+        border-radius: 10px;
+        padding: 6.5rem;
+    }
+    &__calc-box {
+        display: flex;
+        justify-content: space-between;
+        &>form{
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+        }
+        &--top {
+            &>output {
+                color: $prim-color;
+                font-size: 4.6rem;
+                line-height: 5.6rem;
+                font-weight: 600;
+            }
+            &>p {
+                font-weight: 600;
+                font-size: 2.4rem;
+                line-height: 2.9rem;
+                color: $sec-color;
+            }
+        }
+        &--bottom{
+           &>button.btn-c{
+                padding: 2.5rem 6rem !important;
+            }
+        }
+        &--top  label{
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            font-weight: 400;
+            color: $sec-color;
+            &::after,&::before{
+                left: -3.5rem;
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+        &--bottom  label{
+            font-size: 24px;
+            line-height: 29px;
+            color: $prim-color;
+            font-weight: 600;
+            &::after,&::before{
+                left: -3.5rem;
+                width: 2rem;
+                height: 2rem;
+            }
+        }
+    }
+
+    & .custom-control-label {
+        &:before {
+            border-color: $prim-color !important;
+            background-color: $prim-color !important;
+        }
+    }
+}
