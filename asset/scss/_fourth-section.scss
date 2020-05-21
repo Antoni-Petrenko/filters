@@ -12,5 +12,8 @@
     & .card{
         flex-basis: 40%;
         margin-top: 13rem;
+        &:hover{
+            transform: scale(1.1);
+        }
     }
 }
