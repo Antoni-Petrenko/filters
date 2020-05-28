@@ -1,23 +1,45 @@
 .first-section{
+    min-height: 100vh;
+    &> .logo{
+        width: 30%;
+        &>img{
+            width:100%
+        }
+    }
     &__heading{
         font-size: 5.4rem;
         color:$sec-color;
-        margin: 0 !important;
+        margin:7.7rem 0 0 0;
+        width:35%;
+    }
+    &__bg{
+      width: 100%;
+    
+    }
+    &__button-box{
+        margin-top: -100px;
+        padding: 0 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        width: 100%;
+
     }
     &__descrip{
         font-size:3.2rem;
+        margin-top: 3rem;
         color:$sec-color;
         opacity: .8;
         text-transform: uppercase;
+        width:35%;
         
     }
-    &>.row:nth-child(1n){
-        margin-top:7.7rem;
-    }
-    &>.row:nth-child(2n){
-        margin-top: 3rem;
-    }
-    &>.row:nth-child(3n){
-        margin-top: 9rem;
+    
+   
+}
+
+@media screen and (max-width:500px){
+    .first-section{
+        min-height:50vh;
     }
 }

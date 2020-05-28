@@ -1,117 +1,161 @@
-
-.cup-section{
-    margin-top: 15rem;
-    position: relative;
+.cup-section {
+  margin-top: 15rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+ 
+  & > #cup,
+  #water {
+    position: absolute;
+  }
+  & > #cup {
+    width: 30%;  
+    left: calc(45% - (30% / 2));
+    top: calc(15% - (50% / 2));
+    z-index: 3;
+  }
+  & > #water {
+    left: calc(45% - (60% / 2));
+    top: calc(60% - (50% / 2));
+    z-index: 1;
+    width: 60%;
+  }
+  & ul {
+    list-style-type: none;
     display: flex;
+    flex-flow: column wrap;
     justify-content: space-between;
-    height: 470px;
-    &>#cup,#water{
-        position: absolute;  
+    & > li {
+      position: relative;
+      border-radius: 10px;
+      z-index: 2;
+      &::after {
+        content: " ";
+        position: absolute;
+        width: 0.5rem;
+        top: 0;
+        bottom: 0;
+        background-color: $prim-color;
+      }
+      &::before {
+        position: absolute;
+        top: calc(50% - (10px / 2));
+      }
+      & > p {
+        font-size: 2.4rem;
+        color: $sec-color;
+        margin: 0;
+      }
+      & > img {
+        position: absolute;
+        top: 50%;
+      }
     }
-    &>#cup{
-        left: calc(45% - (271px / 2));
-        top: calc(40% - (460px / 2));
-        z-index: 3;
-    }
-    &>#water{
-        left: calc(45% - (656px / 2));
-        top: calc(60% - (476px / 2));
-        z-index: 1;
-    }
-    & ul{
-        list-style-type: none;
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: space-around;
-        &>li{
-            position: relative;
-            border-radius: 10px;
-            z-index: 2;
-            &::after{
-                content:' ';
-                position: absolute;
-                width: 0.5rem;
-                top: 0;
-                bottom: 0;
-                background-color: $prim-color;
-            }
-            &>p{
-                font-size: 2.4rem;
-                color:$sec-color;
-                margin: 0;
-               
-            }
-            &>img{
-                position: absolute;
-                top: 50%;
-            }
+  }
+  &__ul--left {
+    & > li {
+        &:not(:last-of-type){
+            margin-bottom: 10rem;
         }
+      &::after {
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        right: 0;
+      }
+      &::before {
+        content: url("../images/lineGroupLeftBig.svg");
+        left: 100%;
+      }
+      & > p {
+        padding: 0 2.5rem 0 0;
+        text-align: right;
+      }
     }
-    &__ul--left{
-        &>li{
-            &::after{
-               border-top-right-radius: 10px;
-               border-bottom-right-radius: 10px;
-               right: 0;
-            }
-            &>img{
-                left: 100%;
-                transform: translateY(-50%)
-             }
-             &>p{
-               padding: 0 2.5rem 0 0;
-               text-align: right;
-             }
-        }
-        
-    }
-   
-
-    &__ul--right{
-        &>li{
-            &::after{
-                border-top-left-radius: 10px;
-                border-bottom-left-radius: 10px;
-                left: 0;
-             }
-            &>img{
-                right: 100%;
-                transform: translateY(-50%) rotate(180deg)
-            }
-            &>p{
-                padding: 0 0 0 2.5rem;
-            }
-        }
-        
-    }
-}
-
-@media only screen and (max-width: 800px){
-    .fifth-section{
-        
-        &>figure{
-            flex-basis: 48%;
-        }}
   }
 
-  @media screen and (max-width:500px){
-    .cup-section{
-        &>#cup{
-            left: calc(60% - (63% / 2));
-            top: calc(47% - (50% / 2));
-            width: 45%;
-        }
-        &>#water{
-            left: calc(33% - (63% / 2));
-            top: calc(66% - (50% / 2));
-            width: 100%;
-        }
-        &__ul--left,&__ul--right{
-            width: 35%;
-            justify-content: center;
-            li>img{
-                width: 60%;
-            }
-        }
+  &__ul--right {
+    & > li {
+      &::after {
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        left: 0;
+      }
+      &::before {
+        content: url("../images/lineGroupRightBig.svg");
+        right: 100%;
+      }
+      & > p {
+        padding: 0 0 0 2.5rem;
+      }
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .cup-section {
+  
+   
+    &__ul--left {
+      width: 20%;
+
+      & > li {
+        &::after {
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
+          right: 0;
+        }
+        &::before {
+          content: url("../images/lineGroupLeftSmall.svg");
+          left: 100%;
+        }
+        & > p {
+          padding: 0 2.5rem 0 0;
+          text-align: right;
+          font-weight: 700;
+        }
+      }
+    }
+    &__ul--right {
+      width: 20%;
+      & > li {
+        &::after {
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+          left: 0;
+        }
+        &::before {
+          content: url("../images/lineGroupRightSmall.svg");
+          right: 100%;
+        }
+        & > p {
+          padding: 0 0 0 2.5rem;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .cup-section {
+    & > #cup {
+      left: calc(60% - (63% / 2));
+      top: calc(47% - (50% / 2));
+      width: 45%;
+    }
+    & > #water {
+      left: calc(33% - (63% / 2));
+      top: calc(66% - (50% / 2));
+      width: 100%;
+    }
+    &__ul--left,
+    &__ul--right {
+      width: 35%;
+      justify-content: center;
+      li > img {
+        width: 60%;
+      }
+    }
+  }
 }

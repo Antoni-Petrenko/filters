@@ -1,10 +1,11 @@
 .card {
-  padding: 34.4px 44.78px;
+  padding: 3.44rem 4.478rem;
   background: #ffffff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
   border-radius: 6px;
   position: relative;
   overflow: hidden;
+  width:35%;
   &::after{
     content: " ";
     width: .5rem;
@@ -81,10 +82,12 @@
     background-color: white
 }
 .wrapper {
-  max-width: 1170px;
-  padding: 0 15px;
-  margin: -74vh auto 0 auto;
+ overflow: hidden;
+  margin: auto;
+  max-width: 1440px;
   position: relative;
+  padding:3.5rem 10% 0 10%;
+  overflow: hidden;
 }
 .custom-control-input:checked ~ .custom-control-label {
   &::after {
@@ -93,8 +96,7 @@
 }
 @media screen and (min-width:1440px){
   .wrapper{
-    margin: -70vh auto 0 auto;
-    padding: 0 7rem;
+    
   }
 }
 
@@ -109,20 +111,18 @@ only screen and (                min-resolution: 192dpi) and (min-width: 700px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 700px) { 
 
   .wrapper{
-    margin: -70vh auto 0 auto;
-    padding: 0 7rem;
+   
   }
  
 }
 
 @media only screen and (max-width: 1200px){
   .wrapper{
-    padding: 0 7rem;
-    margin: -70vh auto 0 auto;
+   
   }
 }
 @media screen and (max-width:880px){
   .wrapper{
-    margin: -50vh auto 0 auto;
+   
   }
 }
