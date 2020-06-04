@@ -1,45 +1,42 @@
-.first-section{
-    min-height: 100vh;
-    &> .logo{
-        width: 30%;
-        &>img{
-            width:100%
-        }
+.first-section {
+    position: relative;
+    &>img {
+        width: calc(30px + 100%);
+        position: absolute;
+        top: 0;
+        left: -15px;
+        z-index: 0;
     }
-    &__heading{
+    &__heading {
         font-size: 5.4rem;
-        color:$sec-color;
-        margin:7.7rem 0 0 0;
-        width:35%;
+        color: $sec-color;
+        width: 35%;
+        padding-top: 3rem;
+        position: relative;
     }
-    &__bg{
-      width: 100%;
-    
+    &__bg {
+        width: 100%;
+        position: absolute;
     }
-    &__button-box{
-        margin-top: -100px;
-        padding: 0 10%;
+    &__button-box {
+        padding-top: 14rem;
         display: flex;
         justify-content: space-between;
         align-items: flex-end;
         width: 100%;
-
     }
-    &__descrip{
-        font-size:3.2rem;
-        margin-top: 3rem;
-        color:$sec-color;
+    &__descrip {
+        font-size: 3.2rem;
+        color: $sec-color;
         opacity: .8;
         text-transform: uppercase;
-        width:35%;
-        
+        width: 35%;
+        padding-top: 3rem;
     }
-    
-   
 }
 
-@media screen and (max-width:500px){
-    .first-section{
-        min-height:50vh;
+@media only screen and (max-width:500px) {
+    .first-section__button-box {
+        padding-top: 20rem;
     }
 }

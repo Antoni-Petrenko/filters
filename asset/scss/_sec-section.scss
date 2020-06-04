@@ -3,22 +3,18 @@
     margin-top: 15rem;
     display: flex;
     flex-flow: row wrap;
-
-    
-    .custom-control.custom-checkbox{
+    .custom-control.custom-checkbox {
         margin-bottom: 4rem;
-        margin-left:2rem
-      
+        margin-left: 2rem
     }
-    .custom-control-label{
+    .custom-control-label {
         display: flex;
         justify-content: space-between;
-    
     }
-    .custom-control-label::before{
+    .custom-control-label::before {
         margin-top: 0.3rem;
     }
-    .custom-control-label::after{
+    .custom-control-label::after {
         margin-top: 0.3rem;
     }
     &>h2 {
@@ -27,23 +23,23 @@
         margin-bottom: 4.5rem;
         flex-basis: 100%;
     }
-    &__img{
+    &__img {
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
         border-radius: 10px;
         flex-basis: 65%;
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
+        img {
             width: 100%;
         }
     }
     &__calc-box {
         display: flex;
         flex-flow: row nowrap;
-        margin-top:2rem;
+        margin-top: 2rem;
         width: 100%;
-        &>form{
+        &>form {
             display: flex;
             flex-flow: column;
             justify-content: space-between;
@@ -66,36 +62,37 @@
                 color: $sec-color;
             }
         }
-        &--bottom{
+        &--bottom {
             width: 100%;
-           &>button.btn-c{
+            &>button.btn-c {
                 padding: 2.5rem 6rem !important;
             }
         }
-        &--top  label{
+        &--top label {
             font-size: 1.8rem;
             line-height: 2.2rem;
             font-weight: 400;
             color: $sec-color;
-            &::after,&::before{
+            &::after,
+            &::before {
                 left: -3.5rem;
                 width: 2rem;
                 height: 2rem;
             }
         }
-        &--bottom  label{
+        &--bottom label {
             font-size: 24px;
             line-height: 29px;
             color: $prim-color;
             font-weight: 600;
-            &::after,&::before{
+            &::after,
+            &::before {
                 left: -3.5rem;
                 width: 2rem;
                 height: 2rem;
             }
         }
     }
-
     & .custom-control-label {
         &:before {
             border-color: $prim-color !important;
@@ -103,34 +100,108 @@
         }
     }
 }
-.sec-section__calc-box:nth-child(3n){
+
+.sec-section__calc-box:nth-child(3n) {
     margin-top: 5rem;
 }
 
-@media only screen and (max-width: 800px){
-    .sec-section{
-        &__img{
+@media only screen and (max-width: 800px) {
+    .sec-section {
+        margin-top: 36rem;
+        &__img {
             flex-basis: 100%
         }
-        &>form{
+        &>form {
             flex-basis: 100%
         }
-       
     }
-  }
+}
 
-  @media
-only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 700px),
-only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 700px),
-only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 700px),
-only screen and (        min-device-pixel-ratio: 2)      and (min-width: 700px),
-only screen and (                min-resolution: 192dpi) and (min-width: 700px),
-only screen and (                min-resolution: 2dppx)  and (min-width: 700px) {
-    .sec-section__calc-box{
+@media only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 700px), only screen and ( min--moz-device-pixel-ratio: 2) and (min-width: 700px), only screen and ( -o-min-device-pixel-ratio: 2/1) and (min-width: 700px), only screen and ( min-device-pixel-ratio: 2) and (min-width: 700px), only screen and ( min-resolution: 192dpi) and (min-width: 700px), only screen and ( min-resolution: 2dppx) and (min-width: 700px) {
+    .sec-section__calc-box {
         flex-wrap: nowrap
     }
-    .sec-section__img{
+    .sec-section__img {
         padding: 1.5rem;
     }
- }
+}
 
+@media only screen and (max-width:500px) {
+    .sec-section {
+        .custom-control.custom-checkbox {
+            margin-bottom: 4rem;
+            margin-left: 2rem
+        }
+        .custom-control-label {
+            font-size: 5rem;
+            margin-right:3rem;
+            padding-left: 6rem;
+        }
+        .custom-control-label::before {
+            margin-top: 0.3rem;
+            top: -1rem;
+            width: 6rem !important;
+            height: 6rem !important;
+        }
+        .custom-control-label::after {
+            width: 6rem;
+            height: 6rem;
+            top: -1rem;
+        }
+        &>h2 {
+            
+            font-size: 6.2rem;
+        }
+        &__calc-box {
+            flex-wrap: wrap;
+            &>form {
+                margin-top:10rem;
+                flex-basis: 100%;
+            }
+            &--top {
+                &>output {
+                    padding-top:2rem;
+                    font-size: 8.6rem;
+                    
+                   
+                }
+                &>p {
+                    padding-top: 3rem;
+                    font-size: 3.4rem;
+                    padding-bottom: 3rem;
+                    line-height: 5rem;
+                }
+            }
+            &--bottom {
+                width: 100%;
+                &>button.btn-c {
+                    padding: 2.5rem 6rem !important;
+                }
+            }
+            &--top label {
+                font-size: 1.8rem;
+                line-height: 2.2rem;
+                font-weight: 400;
+                color: $sec-color;
+                &::after,
+                &::before {
+                    left: -3.5rem;
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+            &--bottom label {
+                font-size: 24px;
+                line-height: 29px;
+                color: $prim-color;
+                font-weight: 600;
+                &::after,
+                &::before {
+                    left: -3.5rem;
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+        }
+    }
+}

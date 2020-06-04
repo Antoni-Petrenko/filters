@@ -1,5 +1,10 @@
+
+:root{
+    --font-size:10px;
+}
+
 html{
-    font-size:62.5%;
+    font-size:calc(var(--font-size) * 0.0088);
 }
 body{
     font-family: 'Montserrat', sans-serif;
@@ -18,7 +23,14 @@ a:hover{
 
 
 
-
+@media only screen and (max-width:500px){
+    section{
+        h2{
+            font-size: 6.5rem;
+            line-height: 8rem;
+        }
+    }
+}
 
 @media
 only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 700px),
@@ -29,24 +41,10 @@ only screen and (                min-resolution: 192dpi) and (min-width: 700px),
 only screen and (                min-resolution: 2dppx)  and (min-width: 700px) { 
 
   html{
-      font-size: 72.5%
+    //   font-size: 72.5%
   }
     
 }
 
-@media screen and (max-width:1840px){
-    html{
-        font-size: 52%;
-    }
-  }
 
-@media screen and (max-width:1440px){
-    html{
-        font-size: 57%;
-    }
-  }
-  @media screen and (max-width:880px){
-    html{
-        font-size: 36%;
-    }
-  }
+

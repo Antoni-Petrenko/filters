@@ -243,3 +243,16 @@ tl4.from(".fifth-section figure:nth-of-type(6)",.5, {
   opacity:0, 
   ease: Power4.easeOut,
 },'-=0.1');
+function calcFSize(){
+  let rootFontSize = rootStyles.getPropertyValue('--font-size');
+  const firstSectionSize=document.querySelector(".first-section").offsetWidth;
+  root.style.setProperty('--font-size',firstSectionSize+'px');
+}
+
+const root = document.querySelector(':root');
+const rootStyles = getComputedStyle(root);
+calcFSize()
+
+window.addEventListener("resize",calcFSize)
+
+
